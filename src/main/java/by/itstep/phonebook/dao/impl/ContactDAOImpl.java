@@ -12,9 +12,10 @@ import static by.itstep.phonebook.parser.csv.ContactParser.parseContact;
 
 public class ContactDAOImpl implements ContactDAO {
 
-    @Override
+        @Override
     public void createContact(Contact contact) {
         String contactLine = parseContact(contact);
+        // TODO createAddress and create Group
         if (contact.getGroups().isEmpty()){
             Long id = getNumberOfRecords(CONTACT_FILE_PATH) + 1;
             contactLine = String.valueOf(id) + contactLine;

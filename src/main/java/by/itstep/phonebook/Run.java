@@ -12,10 +12,10 @@ import java.util.Set;
 public class Run {
 
     public static void main(String[] args) {
-        Set<String> phones = new HashSet<String>();
+        Set<String> phones = new HashSet<>();
         phones.add("phone1");
         phones.add("phone2");
-        Address address = new Address();
+        Address address = new Address("Grodno", "Belarus", "Lenin", "10");
         Set<Group> groups = new HashSet<>();
         ContactController controller = new ContactControllerImpl();
         Contact contact = new Contact("firstName", "LastName",
